@@ -1,9 +1,10 @@
 import unittest
 
 from Calculator.Calculator import Calculator
-from MathOperations.division import Division
-from MathOperations.addition import Addition
-from MathOperations.subtraction import Subtraction
+import unittest
+
+from Calculator.Calculator import Calculator
+
 
 class MyTestCase(unittest.TestCase):
     def setUp(self):
@@ -11,13 +12,19 @@ class MyTestCase(unittest.TestCase):
 
 
     def test_calculator_return_sum(self):
-        self.assertEqual(3, Addition.sum(1,2))
+        calculator = Calculator()
+        result = calculator.Sum(1, 2)
+        self.assertEqual(3, result)
 
     def test_calculator_return_difference(self):
-        self.assertEqual(-1, Subtraction.difference(1,2))
+        calculator = Calculator()
+        result = calculator.Difference(1, 2)
+        self.assertEqual(-1, result)
 
     def test_calculator_return_fraction(self):
-        self.assertEqual(5, Division.fraction(10,2))
+        calculator = Calculator()
+        result = calculator.Fraction(10,2)
+        self.assertEqual(5, result)
 
 if __name__ == '__main__':
     unittest.main()
