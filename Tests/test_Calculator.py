@@ -1,8 +1,4 @@
 import unittest
-
-from Calculator.Calculator import Calculator
-import unittest
-
 from Calculator.Calculator import Calculator
 
 
@@ -21,10 +17,22 @@ class MyTestCase(unittest.TestCase):
         result = calculator.Difference(1, 2)
         self.assertEqual(-1, result)
 
-    def test_calculator_return_fraction(self):
+    def test_calculator_access_difference_result(self):
         calculator = Calculator()
-        result = calculator.Fraction(10,2)
-        self.assertEqual(5, result)
+        calculator.Difference(1, 2)
+        self.assertEqual(-1, calculator.Result)
+
+    def test_calculator_access_sum_result(self):
+        calculator = Calculator()
+        calculator.Sum(1, 2)
+        self.assertEqual(3, calculator.Result)
+
+    def test_calculator_access_fraction_result(self):
+        calculator = Calculator()
+        calculator.Fraction(5, 5)
+        self.assertEqual(1, calculator.Result)
+
+
 
 if __name__ == '__main__':
     unittest.main()
