@@ -1,7 +1,6 @@
 from MathOperations.addition import Addition
 from MathOperations.subtraction import Subtraction
 from MathOperations.division import Division
-from MathOperations.multiplication import Multiplication
 
 class Calculator:
     Result = 0
@@ -19,6 +18,3 @@ class Calculator:
 
     def Fraction(self, a, b):
         self.Result = Division.fraction(a, b)
-
-    def Product(self, a, b):
-        self.Result = Multiplication.product(a, b)

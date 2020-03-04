@@ -17,11 +17,6 @@ class MyTestCase(unittest.TestCase):
         result = calculator.Difference(1, 2)
         self.assertEqual(result, -1)
 
-    def test_calculator_return_product(self):
-        calculator = Calculator()
-        result = calculator.Product(2, 2)
-        self.assertEqual(result, 4)
-
     def test_calculator_access_difference_result(self):
         calculator = Calculator()
         calculator.Difference(1, 2)
@@ -36,13 +31,6 @@ class MyTestCase(unittest.TestCase):
         calculator = Calculator()
         calculator.Fraction(5, 5)
         self.assertEqual(calculator.Result, 1)
-
-    def test_calculator_access_product_result(self):
-        calculator = Calculator()
-        calculator.Product(2, 2)
-        self.assertEqual(calculator.Result, 4)
-
-
 
 if __name__ == '__main__':
     unittest.main()
